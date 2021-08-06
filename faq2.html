@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.accordion {
+    background : url(static\pasta.png)
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+}
+
+.active, .accordion:hover {
+  background-color: #ccc; 
+}
+
+.panel {
+  padding: 0 18px;
+  display: none;
+  background-color: white;
+  overflow: hidden;
+}
+</style>
+</head>
+<body>
+
+<h2>FAQ</h2>
+
+<button class="accordion">What exactly is Food2Eat?</button>
+<div class="panel">
+  <p>Food2Eat is the mobile application with a sole objective of empowering small businesses, local food outlets and other businesses with a tool that enables them to reach customers within a few taps on the screen. Developed by ValueAppz, this mobile application helps you combat the terror of e-commerce giants that are becoming more & more gigantic. With the help of this app, the restaurant owners can market their menu online and also manage everything, from buying process to tracking payments- on their smartphones/ devices.</p>
+</div>
+
+<button class="accordion">Is this app suitable for my business?</button>
+<div class="panel">
+  <p>Absolutely! This app is for all those restaurants that have a compelling menu, but are lagging behind simply because they have no online presence. Food2Eat gives you your dose of local SEO by empowering you, and helping you reach customers' smartphones. You can put your banners and select the theme at your whim.</p>
+</div>
+
+<button class="accordion">Can I change the delivery time?</button>
+<div class="panel">
+  <p>Yes, in the admin panel, you can change the delivery time and other details of the restaurant as per your convenience.</p>
+</div>
+
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,10 @@
+
+body, html {height: 100%}
+.menu {display: none}
+.bgimg {
+    background-image: url("static\pizza.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+  min-height: 90%;
+}
